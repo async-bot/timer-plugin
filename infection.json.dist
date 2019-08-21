@@ -1,0 +1,24 @@
+{
+    "timeout": 60,
+    "source": {
+        "directories": [
+            "src\/"
+        ]
+    },
+    "logs": {
+        "text": "infection.log"
+    },
+    "mutators": {
+        "@default": true,
+        "IncrementInteger": {
+            "ignore": [
+                "AsyncBot\\Plugin\\Timer\\Plugin"
+            ]
+        },
+        "DecrementInteger": {
+            "ignore": [
+                "AsyncBot\\Plugin\\Timer\\Plugin"
+            ]
+        }
+    }
+}
