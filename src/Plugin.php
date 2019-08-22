@@ -56,6 +56,8 @@ final class Plugin implements Runnable
 
             $eventData = new Tick($newTimestamp, $this->previousTimestamp);
 
+            $this->previousTimestamp = $newTimestamp;
+
             array_walk($this->listeners, fn (EventListener $listener) => $listener($eventData));
         });
 
